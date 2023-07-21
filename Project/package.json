@@ -8,8 +8,10 @@
     "@azure/communication-calling-effects": "1.0.0-beta.1",
     "@azure/communication-network-traversal": "^1.1.0-beta.1",
     "@fluentui/react": "^7.158.1",
+    "html-react-parser": "^3.0.16",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
+    "react-html-parser": "^2.0.2",
     "react-onesignal": "^2.0.4"
   },
   "scripts": {

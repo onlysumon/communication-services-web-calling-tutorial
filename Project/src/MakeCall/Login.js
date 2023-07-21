@@ -111,6 +111,7 @@ export default class Login extends React.Component {
             this.setState({
                 communicationUserId: utils.getIdentifierText(this.userDetailsResponse.communicationUserToken.user)
             });
+            window.mri = this.state.communicationUserId;
             if (this.state.initializedOneSignal) {
                 OneSignal.setExternalUserId(this.userDetailsResponse.oneSignalRegistrationToken);
             }

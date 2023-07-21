@@ -9,7 +9,8 @@ import axios from 'axios';
 export const acsOpenAiPromptsApi = {
     base: 'https://acsopenaigateway.azurewebsites.net/api/',
     summary: 'getSummary',
-    feedback: 'getPersonalFeedback'
+    feedback: 'getPersonalFeedback',
+    feedbackTasks: 'createActionItems'
 }
 
 export const utils = {
@@ -57,7 +58,7 @@ export const utils = {
         }
         throw new Error('Failed to get ACS User Acccess token for the given OneSignal Registration Token');
     },
-    sendCaptionsDataToAcsOpenAI: async (apiEndpoint, participantName, lastResponse, newCaptionsData) => {
+    sendCaptionsDataToAcsOpenAI: async (apiEndpoint, participantName, lastResponse, newCaptionsData="") => {
         let response = await axios({
             url: acsOpenAiPromptsApi.base + apiEndpoint,
             method: 'POST',
